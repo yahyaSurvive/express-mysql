@@ -37,5 +37,3 @@ app.use("/barang", barangRoutes);
 app.listen(PORT, () => {
   console.log(`server berhasil running di port ${PORT}`);
 });
-
-module.exports = app;
