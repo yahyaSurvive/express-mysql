@@ -4,7 +4,13 @@ const userControllers = require("../controller/users.js");
 const router = express.Router();
 
 //GET
-router.get("/", userControllers.getAllUsers);
+router.get("/", function (req, res) {
+  res.json({
+    message: "GET all Users",
+    data: "yahya",
+  });
+});
+// router.get("/", userControllers.getAllUsers);
 
 //GET secara spesifik
 router.get("/:idUser", userControllers.getChoosenUsers);
