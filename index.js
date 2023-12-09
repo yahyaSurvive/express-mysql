@@ -11,11 +11,11 @@ require("dotenv").config();
 const PORT = process.env.PORT || 4000;
 
 //untuk menuju ke file users
-const usersRoutes = require("./routes/users.js");
-const barangRoutes = require("./routes/barang");
+const usersRoutes = require("./src/routes/users.js");
+const barangRoutes = require("./src/routes/barang.js");
 
 //untuk memanggil file middleware agar bisa berjalan sebelum respon berpindah ke file lain
-const middlewareLog = require("./middleware/logs");
+const middlewareLog = require("./src/middleware/logs.js");
 
 const app = expess();
 app.use(
