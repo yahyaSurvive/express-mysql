@@ -13,6 +13,7 @@ const PORT = process.env.PORT || 4000;
 //untuk menuju ke file users
 const usersRoutes = require("./src/routes/users.js");
 const barangRoutes = require("./src/routes/barang.js");
+const productRoutes = require("./src/routes/product.js");
 
 //untuk memanggil file middleware agar bisa berjalan sebelum respon berpindah ke file lain
 const middlewareLog = require("./src/middleware/logs.js");
@@ -32,6 +33,7 @@ app.use(expess.json());
 //untuk memanggil apapun yang diawali slash user mengarah ke file users di folder routes
 app.use("/users", usersRoutes);
 app.use("/barang", barangRoutes);
+app.use("/product", productRoutes);
 
 //setting port yang akan berjalan, kebetulan pada code dibawah mengambil dari file .env yang bernilai 4000
 app.listen(PORT, () => {
